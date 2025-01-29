@@ -106,6 +106,10 @@ footer {
     gap: 20px;
     justify-content: center;
     text-align: center;
+    .footer-links {
+      display: grid;
+      gap: 20px;
+    }
     a {
       text-decoration: none;
       color: $DarkGrayishBlue;
@@ -209,8 +213,6 @@ footer {
       gap: 50px;
       grid-template-columns: repeat(3, 1fr);
       .footer-links {
-        display: grid;
-        gap: 20px;
         justify-items: left;
       }
     }

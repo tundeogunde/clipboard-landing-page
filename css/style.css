@@ -102,6 +102,10 @@ footer .bottom-links {
   justify-content: center;
   text-align: center;
 }
+footer .bottom-links .footer-links {
+  display: grid;
+  gap: 20px;
+}
 footer .bottom-links a {
   text-decoration: none;
   color: hsl(210, 10%, 33%);
@@ -202,8 +206,6 @@ footer .sm-brands {
     grid-template-columns: repeat(3, 1fr);
   }
   footer .bottom-links .footer-links {
-    display: grid;
-    gap: 20px;
     justify-items: left;
   }
   footer .sm-brands {

@@ -1,0 +1,224 @@
+$StrongCyan: hsl(171, 66%, 44%);
+$LightBlue: hsl(233, 100%, 69%);
+$DarkGrayishBlue: hsl(210, 10%, 33%);
+$GrayishBlue: hsl(201, 11%, 66%);
+
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  color: $DarkGrayishBlue;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-top: 120px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: -5px;
+}
+
+p {
+  font-size: 1rem;
+  color: $GrayishBlue;
+  line-height: 1.7;
+  margin-bottom: 60px;
+}
+
+main {
+  padding: 150px 30px;
+  background: #ffffff url("../images/bg-header-mobile.png") no-repeat top;
+  background-size: contain;
+  text-align: center;
+}
+
+.copy-lg {
+  font-size: 7.5rem;
+  color: $StrongCyan;
+}
+
+.copy-sm {
+  font-size: 3.5rem;
+  color: $StrongCyan;
+  text-align: center;
+}
+
+button {
+  padding: 16px;
+  width: 100%;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.btn-ios {
+  background: $StrongCyan;
+  border: 1px solid $GrayishBlue;
+  box-shadow: 0px 5px 40px -15px $StrongCyan;
+}
+
+.btn-mac {
+  background: $LightBlue;
+  border: 1px solid $DarkGrayishBlue;
+  box-shadow: 0px 5px 40px -15px $LightBlue;
+}
+
+.image {
+  width: 100%;
+}
+
+.margin-t-20 {
+  margin-top: 20px;
+}
+
+.coy-logos {
+  display: grid;
+  gap: 60px;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+footer {
+  background: #f5f6f8;
+  padding: 50px 0;
+  display: grid;
+  gap: 50px;
+  justify-content: center;
+  .bottom-links {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: $DarkGrayishBlue;
+    }
+  }
+  .sm-brands {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    justify-items: center;
+    font-size: 2rem;
+    padding: 0 60px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 640px) and (max-width: 964px) {
+  main {
+    padding: 100px 100px;
+  }
+}
+
+@media screen and (min-width: 965px) {
+  main {
+    padding: 100px 120px;
+    background: #ffffff url("../images/bg-header-desktop.png") no-repeat top;
+    overflow-x: hidden;
+  }
+  .copy-lg {
+    font-size: 5.5rem;
+    color: $StrongCyan;
+    font-weight: 400;
+  }
+  .section-1 {
+    padding: 0px calc((100% - 544px) / 2);
+  }
+  .section-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0 -200px;
+    .subsection {
+      padding-left: 100px;
+      padding-right: 250px;
+      text-align: left;
+    }
+  }
+  .section-3 {
+    padding: 0 10%;
+    .subsection {
+      padding: 0 calc((100% - 600px) / 2);
+    }
+  }
+  .section-4 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section-5 {
+    padding: 0px calc((100% - 600px) / 2);
+  }
+  .buttons {
+    padding: 0 50px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .coy-logos {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    justify-items: center;
+    img {
+      width: 70%;
+    }
+  }
+  footer {
+    padding: 50px 150px;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-areas:
+      "logo link link link social"
+      "logo link link link social"
+      "attribute attribute attribute attribute attribute";
+    .copy-sm {
+      grid-area: logo;
+    }
+    .bottom-links {
+      text-align: left;
+      font-size: 0.9rem;
+      grid-area: link;
+      display: grid;
+      gap: 50px;
+      grid-template-columns: repeat(3, 1fr);
+      .footer-links {
+        display: grid;
+        gap: 20px;
+        justify-items: left;
+      }
+    }
+    .sm-brands {
+      grid-area: social;
+    }
+    .attribution {
+      grid-area: attribute;
+    }
+  }
+}
